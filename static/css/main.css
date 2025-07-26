@@ -1,0 +1,199 @@
+/* Farben definieren (Magenta/Rosa-Töne) */
+:root {
+    --color1: #d6336c; /* kräftiges Magenta */
+    --color2: #e754a0; /* leuchtendes Rosa */
+    --color3: #f28ab2; /* helles Rosa */
+    --color4: #b33475; /* dunkler Magenta */
+    --color5: #f49ac2; /* zartes Pink */
+    --color6: #a02a63; /* tiefes Magenta */
+    --text-color: #000000; /* Schwarz für Text */
+}
+
+/* ----------------------------------------------------
+Grundeinstellungen
+---------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--color5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------------------------------------
+Header
+---------------------------------------------------- */
+header {
+    background-color: var(--color1);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ----------------------------------------------------
+Topnav
+---------------------------------------------------- */
+.topnav {
+    background-color: var(--color2);
+}
+
+.topnav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav li {
+    margin: 0 1rem;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    display: block;
+}
+
+.topnav a:hover {
+    background-color: var(--color4);
+    border-radius: 4px;
+}
+
+
+/* ----------------------------------------------------
+Sidenav
+---------------------------------------------------- */
+/* Container für Sidenav + Main */
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 200px 1fr; /* linke Nav 200px, Rest flexibel */
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+/* Seiten Navigation */
+.sidenav {
+    background-color: var(--color3);
+    padding: 1rem;
+}
+
+.sidenav ul {
+    list-style: none;
+}
+
+.sidenav li {
+    margin-bottom: 1rem;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: var(--color6);
+    font-weight: 600;
+}
+
+.sidenav a:hover {
+    color: var(--color1);
+}
+
+/* ----------------------------------------------------
+Hauptinhalt
+---------------------------------------------------- */
+main {
+    padding: 1rem;
+}
+
+/* ----------------------------------------------------
+Footer
+---------------------------------------------------- */
+footer {
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/* ----------------------------------------------------
+Responsive Anpassungen
+---------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    /* Etwas kleinere Breite: Container 1-spaltig */
+    .container {
+        grid-template-columns: 150px 1fr;
+    }
+    .sidenav {
+        padding: 0.5rem;
+    }
+    .topnav ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .topnav li {
+        margin: 0.25rem 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablet und kleinere Displays */
+
+    /* Container wird einspaltig: keine Sidebar */
+    .container {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .sidenav {
+        display: none; /* Sidebar ausblenden */
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+
+    .topnav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topnav li {
+        margin: 0.25rem 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Kleine Smartphones */
+
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .topnav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    main h2 {
+        font-size: 1.25rem;
+    }
+}
