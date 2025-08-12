@@ -1,0 +1,6 @@
+---
+layout: recipe
+title: Salate
+---
+
+
