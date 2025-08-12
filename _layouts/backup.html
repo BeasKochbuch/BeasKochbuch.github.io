@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beas Kochbuch</title>
+    <link rel="stylesheet" href="static\css\main.css" />
+    <script src="/static/js/menu-toggle.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Beas Kochbuch</h1>
+    </header>
+
+    {% include navbar.html %}
+    <!-- change to aside and main -->
+    <section>
+        <!-- <nav class="sidenav menu-toggle">
+        <ul>
+            <li>
+            <input type="checkbox" id="toggle-1" />
+            <label for="toggle-1" class="main-item">Hauptpunkt 1</label>
+            <ul class="sub-menu">
+                <li><a href="#">Unterpunkt 1.1</a></li>
+                <li><a href="#">Unterpunkt 1.2</a></li>
+            </ul>
+            </li>
+            <li>
+            <input type="checkbox" id="toggle-2" />
+            <label for="toggle-2" class="main-item">Hauptpunkt 2</label>
+            <ul class="sub-menu">
+                <li><a href="#">Unterpunkt 2.1</a></li>
+            </ul>
+            </li>
+        </ul>
+        </nav> -->
+
+        <!-- <nav class="sidenav menu-static">
+        <ul>
+            <li>
+            <a href="/hauptpunkt1.html" class="main-link">Hauptpunkt 1</a>
+            <ul class="sub-menu">
+                <li><a href="#">Unterpunkt 1.1</a></li>
+                <li><a href="#">Unterpunkt 1.2</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="/hauptpunkt2.html" class="main-link">Hauptpunkt 2</a>
+            <ul class="sub-menu">
+                <li><a href="#">Unterpunkt 2.1</a></li>
+            </ul>
+            </li>
+        </ul>
+        </nav> -->
+        {% block sidenav %}{% endblock %}
+
+        <!-- main == article -->
+        <main>
+            {{ content }}
+        </main>
+    </section>
+
+    <footer>
+        <p>Beas Kochbuch © 2025</p>
+    </footer>
+</body>
+</html>

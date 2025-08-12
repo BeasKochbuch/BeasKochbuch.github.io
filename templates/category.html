@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block sidenav %}
+    <nav class="sidenav menu-toggle">
+    <ul>
+        <li>
+        <input type="checkbox" id="toggle-1" />
+        <label for="toggle-1" class="main-item">Hauptpunkt 1</label>
+        <ul class="sub-menu">
+            <li><a href="#">Unterpunkt 1.1</a></li>
+            <li><a href="#">Unterpunkt 1.2</a></li>
+        </ul>
+        </li>
+        <li>
+        <input type="checkbox" id="toggle-2" />
+        <label for="toggle-2" class="main-item">Hauptpunkt 2</label>
+        <ul class="sub-menu">
+            <li><a href="#">Unterpunkt 2.1</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <h2>Category</h2>
+    <p>Schön dass du den Weg zu meiner Rezeptsammlung gefunden hast. Bei der Rezeptsammlung handelt es sich um Familienrezepte und eigene kreationen.</p>
+    <p>Viel Spaß beim nachkochen und backen</p>
+{% endblock %}

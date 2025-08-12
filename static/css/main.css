@@ -1,12 +1,15 @@
 /* Farben definieren (Magenta/Rosa-Töne) */
 :root {
-    --color1: #d6336c; /* kräftiges Magenta */
-    --color2: #e754a0; /* leuchtendes Rosa */
-    --color3: #f28ab2; /* helles Rosa */
-    --color4: #b33475; /* dunkler Magenta */
-    --color5: #f49ac2; /* zartes Pink */
-    --color6: #a02a63; /* tiefes Magenta */
-    --text-color: #000000; /* Schwarz für Text */
+    --color1: #FFE0E9;
+    --color2: #FFC2D4;
+    --color3: #FF9EBB;
+    --color4: #FF7AA2;
+    --color5: #E05780;
+    --color6: #B9375E;
+    --color7: #8A2846;
+    --color8: #602437;
+    --color9: #522E38;
+    --cream-white: #fff1e6;
 }
 
 /* ----------------------------------------------------
@@ -21,7 +24,7 @@ Grundeinstellungen
 }
 
 body {
-    background-color: var(--color5);
+    background-color: var(--cream-whithe);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,17 +34,31 @@ body {
 Header
 ---------------------------------------------------- */
 header {
-    background-color: var(--color1);
+    background-color: var(--color6);
     color: white;
     padding: 1rem;
+    /* padding: 30px; */
     text-align: center;
+    /* font-size: 35px; */
 }
 
 /* ----------------------------------------------------
 Topnav
 ---------------------------------------------------- */
 .topnav {
-    background-color: var(--color2);
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* Links und Rechts Buttons Container */
+.topnav-left, .topnav-right {
+    display: flex;
+    gap: 0.75rem;
 }
 
 .topnav ul {
@@ -56,55 +73,194 @@ Topnav
 
 .topnav a {
     text-decoration: none;
-    color: white;
+    text-align: center;
+    color: black;
     font-weight: bold;
     padding: 0.75rem 1rem;
     display: block;
+    float: left;
 }
 
 .topnav a:hover {
-    background-color: var(--color4);
+    background-color: var(--color3);
     border-radius: 4px;
 }
 
+/* Buttons in Topnav */
+.topnav button {
+    background-color: var(--color1);
+    border: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-/* ----------------------------------------------------
-Sidenav
----------------------------------------------------- */
-/* Container für Sidenav + Main */
-.container {
+.topnav button:hover {
+    background-color: var(--color3);
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--color6);
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color3);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+/* Section für Sidenav + Main */
+.section {
     flex: 1;
     display: grid;
     grid-template-columns: 200px 1fr; /* linke Nav 200px, Rest flexibel */
     grid-template-rows: auto;
     gap: 1rem;
     padding: 1rem;
-    background-color: white;
+    background-color: var(white);
 }
 
-/* Seiten Navigation */
+
+
+
+/* ----------------------------------------------------
+Sidenav
+---------------------------------------------------- */
+/* Gemeinsame Basis für sidenav */
 .sidenav {
-    background-color: var(--color3);
-    padding: 1rem;
+  background-color: var(--color1);
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100vh - 200px);
+  font-family: Arial, sans-serif;
 }
 
 .sidenav ul {
-    list-style: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .sidenav li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-.sidenav a {
-    text-decoration: none;
-    color: var(--color6);
-    font-weight: 600;
+/* Hauptpunkt Label (Toggle-Menü) */
+.menu-toggle .main-item {
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  color: var(black);
+  user-select: none;
 }
 
-.sidenav a:hover {
-    color: var(--color1);
+.menu-toggle .main-item:hover {
+  color: var(--color6);
 }
+
+/* Versteckte Checkboxen */
+.menu-toggle input[type="checkbox"] {
+  display: none;
+}
+
+/* Untermenü im Toggle-Menü - standardmäßig versteckt */
+.menu-toggle .sub-menu {
+  display: none;
+  margin-left: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+/* Untermenü sichtbar, wenn Checkbox checked */
+.menu-toggle input[type="checkbox"]:checked + label + .sub-menu {
+  display: block;
+}
+
+/* Untermenü Links */
+.sidenav .sub-menu li a {
+  color: var(black);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  padding: 0.2rem 0;
+  border: 2px solid var(--color1);
+}
+
+.sidenav .sub-menu li a:hover {
+  color: var(--color6);
+  text-decoration: none;
+  border: 2px solid var(--color6);
+}
+
+/* Hauptpunkt Links (statisches Menü) */
+.menu-static .main-link {
+  display: block;
+  font-weight: 700;
+  padding: 0.3rem 0;
+  color: var(black);
+  text-decoration: none;
+}
+
+.menu-static .main-link:hover {
+  color: var(--color6);
+}
+
+/* Untermenü im statischen Menü - immer sichtbar */
+.menu-static .sub-menu {
+  display: block;
+  margin-left: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+
+
+
+
 
 /* ----------------------------------------------------
 Hauptinhalt
@@ -113,12 +269,16 @@ main {
     padding: 1rem;
 }
 
+
+
+
+
 /* ----------------------------------------------------
 Footer
 ---------------------------------------------------- */
 footer {
     background-color: var(--color1);
-    color: white;
+    color: var(white);
     text-align: center;
     padding: 1rem;
 }
@@ -129,7 +289,7 @@ footer {
 Responsive Anpassungen
 ---------------------------------------------------- */
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
     /* Etwas kleinere Breite: Container 1-spaltig */
     .container {
         grid-template-columns: 150px 1fr;
@@ -146,7 +306,7 @@ Responsive Anpassungen
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     /* Tablet und kleinere Displays */
 
     /* Container wird einspaltig: keine Sidebar */
@@ -177,7 +337,7 @@ Responsive Anpassungen
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     /* Kleine Smartphones */
 
     body {
