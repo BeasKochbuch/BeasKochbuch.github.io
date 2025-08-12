@@ -1,9 +1,12 @@
 ---
 layout: recipe
-title: American Coleslaw
+title: "American Coleslaw"
+category: "Salzige Rezepte"
+subcategory: "Salate"
+permalink: /recipes/salty/salads/american-coleslaw/
 ---
 
-Zutaten
+# Zutaten
 ½ Kopf Rotkohl
 ½ Kopf Eisbergsalat
 1 Zwiebel
@@ -17,6 +20,8 @@ Dressing:
 4 TL Sojasauce
 125 ml neutrales Öl
 125 ml neutraler Essig
+
+# Zubereitung
 Rotkohl und Eisbergsalat in feine Streifen und die Zwiebel klein schneiden.
 Mandeln, Sonnenblumenkerne und klein gebröselte Ramennudeln in der Butter rösten.
 Das Dressing im Shaker zubereiten.
