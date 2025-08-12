@@ -1,6 +1,14 @@
 title: Beas Kochbuch
 description: Eine Sammlung leckerer Rezepte
 theme: null
+
 collections:
   recipes:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe

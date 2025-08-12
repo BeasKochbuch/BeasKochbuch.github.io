@@ -17,8 +17,30 @@
 </nav> -->
 
 <nav class="topnav">
-    <div class="topnav-left">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/recipes' | relative_url }}">Rezepte</a>
+  <div class="topnav-left">
+    <a href="{{ '/' | relative_url }}">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Rezepte</button>
+      <div class="dropdown-content">
+        {% assign cats = site.recipes | map: "category" | uniq | sort %}
+        {% for c in cats %}
+          <div class="dropdown-category">
+            <strong>{{ c }}</strong>
+            <ul>
+              {% assign subs = site.recipes | where:"category", c | map: "subcategory" | uniq | sort %}
+              {% for s in subs %}
+                {% assign slug = s | slugify %}
+                <li><a href="{{ '/recipes/' | append: slug | append: '/' | relative_url }}">{{ s }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
+
+  <div class="topnav-right">
+    <a href="{{ '/about' | relative_url }}">Über mich</a>
+  </div>
 </nav>

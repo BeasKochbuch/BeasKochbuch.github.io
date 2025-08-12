@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-    {% include navbar.html %}
-    <article class="recipe">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
+  {% include navbar.html %}
+  <div class="section container"> 
+    <aside class="sidebar">
+      <h3>{{ page.subcategory }}</h3>
+      <ul>
+        {% assign subitems = site.recipes | where:"subcategory", page.subcategory | sort: "title" %}
+        {% for s in subitems %}
+          <li class="{% if s.url == page.url %}current{% endif %}">
+            <a href="{{ s.url | relative_url }}">{{ s.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
+
+    <article class="main-content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
     </article>
+  </div>
 </body>
 </html>
