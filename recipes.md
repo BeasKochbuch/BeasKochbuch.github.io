@@ -11,7 +11,7 @@ title: Rezepte
   {% assign subs = site.recipes | where:"category", c | map: "subcategory" | compact | uniq | sort %}
   <ul>
   {% for s in subs %}
-    <li><a href="{{ '/recipes/' | append: s | slugify | append: '/' | relative_url }}">{{ s }}</a></li>
+    <li><a href="{{ '/recipes/' | append: (s | slugify) | append: '/' | relative_url }}">{{ s }}</a></li>
   {% endfor %}
   </ul>
 {% endfor %}
