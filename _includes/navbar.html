@@ -1,7 +1,3 @@
-{% assign cats = site.recipes
-  | where:"layout","recipe"
-  | map:"category" | compact | uniq | sort %}
-
 <nav class="topnav">
   <div class="topnav-left">
     <a href="{{ '/' | relative_url }}">Home</a>
@@ -9,43 +5,36 @@
     <div class="dropdown">
       <button class="dropbtn">Rezepte</button>
       <div class="dropdown-content">
-        {% for c in cats %}
-          {% assign cat_landing = site.recipes
-            | where:"layout","category"
-            | where:"category", c
-            | first %}
+        {%- comment -%}
+          Alle Kategorie-Landingpages: layout: category, OHNE subcategory
+        {%- endcomment -%}
+        {%- assign cat_pages = site.recipes
+          | where:"layout","category"
+          | where_exp:"p","p.subcategory == nil or p.subcategory == ''"
+          | sort:"title" -%}
 
+        {%- for cat in cat_pages -%}
           <div class="dropdown-category">
-            {% if cat_landing %}
-              <strong><a href="{{ cat_landing.url | relative_url }}">{{ c }}</a></strong>
-            {% else %}
-              <strong>{{ c }}</strong>
-            {% endif %}
+            <strong><a href="{{ cat.url | relative_url }}">{{ cat.title }}</a></strong>
 
-            <ul>
-              {% assign subs = site.recipes
-                | where:"layout","recipe"
-                | where:"category", c
-                | map:"subcategory" | compact | uniq | sort %}
+            {%- comment -%}
+              Passende Unterkategorie-Landingpages: layout: category, MIT subcategory
+            {%- endcomment -%}
+            {%- assign sub_pages = site.recipes
+              | where:"layout","category"
+              | where:"category", cat.category
+              | where_exp:"p","p.subcategory and p.subcategory != ''"
+              | sort:"title" -%}
 
-              {% for s in subs %}
-                {% assign landing = site.recipes
-                  | where:"layout","category"
-                  | where:"category", c
-                  | where:"subcategory", s
-                  | first %}
-
-                <li>
-                  {% if landing %}
-                    <a href="{{ landing.url | relative_url }}">{{ s }}</a>
-                  {% else %}
-                    <a href="{{ '/recipes/' | append:(s | slugify) | append:'/' | relative_url }}">{{ s }}</a>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
+            {%- if sub_pages.size > 0 -%}
+              <ul>
+                {%- for sub in sub_pages -%}
+                  <li><a href="{{ sub.url | relative_url }}">{{ sub.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
           </div>
-        {% endfor %}
+        {%- endfor -%}
       </div>
     </div>
   </div>
