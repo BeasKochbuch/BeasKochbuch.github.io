@@ -12,7 +12,7 @@ title: Rezepte
   <ul>
   {% for s in subs %}
     <li>
-      <a href="{{ '/recipes/' | append: (c | slugify) | append: '/' | append: (s | slugify) | append: '/' | relative_url }}">
+      <a href="{{ '/recipes/' | append: c | append: '/' | append: s | append: '/' | relative_url }}">
         {{ s }}
       </a>
     </li>
