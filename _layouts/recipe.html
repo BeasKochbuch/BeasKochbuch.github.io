@@ -17,16 +17,18 @@
   <div class="section"> 
     <aside class="sidebar">
       <h3>{{ page.subcategory }}</h3>
+      {% assign items = site.recipes
+        | where:"subcategory", page.subcategory
+        | where:"layout","recipe"
+        | sort:"title" %}
+
       <ul>
-        {% assign subitems = site.recipes | where:"subcategory", page.subcategory | sort: "title" %}
-        {% for s in subitems %}
-          <li class="{% if s.url == page.url %}current{% endif %}">
-            <a href="{{ s.url | relative_url }}">{{ s.title }}</a>
-          </li>
-        {% endfor %}
+      {% for r in items %}
+        <li><a href="{{ r.url | relative_url }}">{{ r.title }}</a></li>
+      {% endfor %}
       </ul>
     </aside>
-
+    
     <article>
       <h1>{{ page.title }}</h1>
       {{ content }}

@@ -150,6 +150,7 @@ Topnav
 
 .dropdown-content a:hover {
     background-color: var(--color1);
+    color: black;
 }
 
 .dropdown:hover .dropdown-content {
