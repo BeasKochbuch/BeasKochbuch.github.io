@@ -5,9 +5,6 @@
     <div class="dropdown">
       <button class="dropbtn">Rezepte</button>
       <div class="dropdown-content">
-        {%- comment -%}
-          Alle Kategorie-Landingpages: layout: category, OHNE subcategory
-        {%- endcomment -%}
         {%- assign cat_pages = site.recipes
           | where:"layout","category"
           | where_exp:"p","p.subcategory == nil or p.subcategory == ''"
@@ -17,9 +14,6 @@
           <div class="dropdown-category">
             <strong><a href="{{ cat.url | relative_url }}">{{ cat.title }}</a></strong>
 
-            {%- comment -%}
-              Passende Unterkategorie-Landingpages: layout: category, MIT subcategory
-            {%- endcomment -%}
             {%- assign sub_pages = site.recipes
               | where:"layout","category"
               | where:"category", cat.category
