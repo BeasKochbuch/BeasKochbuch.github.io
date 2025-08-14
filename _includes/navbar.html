@@ -7,18 +7,18 @@
       <div class="dropdown-content">
         {%- assign cat_pages = site.recipes
           | where:"layout","category"
-          | where_exp:"p","p.subcategory == nil or p.subcategory == ''"
+          | where:"subcategory", nil
           | sort:"title" -%}
 
         {%- for cat in cat_pages -%}
           <div class="dropdown-category">
             <strong><a href="{{ cat.url | relative_url }}">{{ cat.title }}</a></strong>
 
-            {%- assign sub_pages = site.recipes
+            {% assign sub_pages = site.recipes
               | where:"layout","category"
               | where:"category", cat.category
-              | where_exp:"p","p.subcategory and p.subcategory != ''"
-              | sort:"title" -%}
+              | reject:"subcategory", nil
+              | sort:"title" %}
 
             {%- if sub_pages.size > 0 -%}
               <ul>
