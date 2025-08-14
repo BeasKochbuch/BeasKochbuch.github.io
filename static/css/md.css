@@ -1,0 +1,247 @@
+/* ===== Markdown "Prose" Styles ===========================================
+   Nutze im HTML einen Wrapper: <article class="prose">…</article>
+   Funktioniert gut mit Jekyll/Kramdown/GFM.
+=========================================================================== */
+
+:root{
+  /* Farbpalette (hell) */
+  --bg: #ffffff;
+  --text: #1f2937;           /* slate-800 */
+  --muted: #6b7280;          /* slate-500 */
+  --border: #e5e7eb;         /* gray-200 */
+  --soft: #f8fafc;           /* slate-50 */
+  --accent: #2563eb;         /* blue-600 */
+  --accent-underline: rgba(37, 99, 235, .25);
+  --code-bg: #0b1020;
+  --code-text: #e5e7eb;
+  --kbd-bg: #f3f4f6;
+  --kbd-border: #d1d5db;
+  --mark-bg: #fef3c7;        /* amber-100 */
+  --table-stripe: #fafafa;
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 20px rgba(0,0,0,.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --soft: #0f172a;
+    --accent: #60a5fa;
+    --accent-underline: rgba(96,165,250,.25);
+    --code-bg: #0a0f1c;
+    --code-text: #e5e7eb;
+    --kbd-bg: #0f172a;
+    --kbd-border: #233047;
+    --mark-bg: #3a2e00;
+    --table-stripe: #0f1626;
+    --shadow: none;
+  }
+}
+
+/* Basis-Typografie ------------------------------------------------------- */
+.prose {
+  color: var(--text);
+  background: transparent;
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  line-height: 1.7;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  word-wrap: break-word;
+}
+
+.prose :where(h1,h2,h3,h4,h5,h6){
+  line-height: 1.25;
+  margin: 1.6rem 0 .6rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.prose h1{ font-size: clamp(1.9rem, 3vw, 2.4rem); margin-top: 0; }
+.prose h2{ font-size: clamp(1.5rem, 2.2vw, 1.8rem); border-bottom: 1px solid var(--border); padding-bottom: .35rem; }
+.prose h3{ font-size: clamp(1.25rem, 1.8vw, 1.4rem); }
+.prose h4{ font-size: 1.1rem; }
+
+.prose p, .prose ul, .prose ol, .prose blockquote, .prose pre, .prose table, .prose figure {
+  margin: .9rem 0 1rem;
+}
+
+.prose strong { font-weight: 700; }
+.prose em { font-style: italic; }
+.prose small { color: var(--muted); }
+
+.prose a{
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-underline);
+  transition: border-color .2s ease, background .2s ease;
+}
+.prose a:hover{ border-color: var(--accent); }
+
+.prose mark{ background: var(--mark-bg); padding: .1em .25em; border-radius: .2em; }
+
+/* Listen ----------------------------------------------------------------- */
+.prose ul, .prose ol { padding-left: 1.25rem; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { margin: .25rem 0; }
+.prose li::marker { color: var(--muted); }
+
+/* Task-Listen (GitHub-Flavored Markdown) --------------------------------- */
+.prose input[type="checkbox"]{
+  transform: translateY(1px);
+  margin-right: .5rem;
+  accent-color: var(--accent);
+}
+
+/* Zitate ----------------------------------------------------------------- */
+.prose blockquote{
+  margin: 1.2rem 0;
+  padding: .9rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--soft);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.prose blockquote p{ margin: 0; }
+
+/* Code & Pre ------------------------------------------------------------- */
+.prose code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .95em;
+  background: rgba(125,125,125,.12);
+  padding: .15em .35em;
+  border-radius: .35em;
+}
+.prose pre{
+  overflow: auto;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: .6rem;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+.prose pre code{
+  background: transparent;
+  padding: 0;
+  font-size: .95em;
+}
+
+/* Inline-Tastenkombinationen --------------------------------------------- */
+.prose kbd{
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  border-bottom-width: 2px;
+  padding: .1em .4em;
+  border-radius: .35rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .85em;
+}
+
+/* Tabellen --------------------------------------------------------------- */
+.prose table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: .6rem;       /* für Container below */
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: block;
+  max-width: 100%;
+}
+.prose thead th{
+  text-align: left;
+  background: var(--soft);
+  color: var(--text);
+  padding: .7rem .75rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+}
+.prose td, .prose th{
+  padding: .6rem .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.prose tbody tr:nth-child(odd){ background: var(--table-stripe); }
+.prose table caption{
+  caption-side: bottom;
+  color: var(--muted);
+  padding: .5rem .25rem 0;
+  font-size: .95em;
+}
+
+/* Bilder & Figure -------------------------------------------------------- */
+.prose img{
+  max-width: 100%;
+  height: auto;
+  border-radius: .6rem;
+  display: block;
+}
+.prose figure{
+  margin: 1.2rem 0;
+  text-align: center;
+}
+.prose figcaption{
+  color: var(--muted);
+  font-size: .95em;
+  margin-top: .35rem;
+}
+
+/* HR --------------------------------------------------------------------- */
+.prose hr{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Details/Summary (FAQ/Notizen) ----------------------------------------- */
+.prose details{
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: .6rem;
+  padding: .6rem .8rem;
+  box-shadow: var(--shadow);
+}
+.prose summary{
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+}
+
+/* Fußnoten (Kramdown) ---------------------------------------------------- */
+.prose sup[id^="fnref"], .prose sup.footnote-ref { font-size: .75em; }
+.prose .footnotes{
+  margin-top: 2rem;
+  font-size: .95em;
+  color: var(--muted);
+  border-top: 1px dashed var(--border);
+  padding-top: .75rem;
+}
+
+/* Code-Highlighting (minimal, ohne externe Themes) ---------------------- */
+.prose .highlight { background: var(--code-bg); color: var(--code-text); border-radius: .6rem; overflow:auto; }
+.prose .highlight pre { background: transparent; padding: 1rem 1.1rem; }
+.prose .highlight .k, .prose .highlight .kn, .prose .highlight .kd { color: #93c5fd; }  /* keywords */
+.prose .highlight .s, .prose .highlight .sd, .prose .highlight .s1, .prose .highlight .s2 { color: #fca5a5; } /* strings */
+.prose .highlight .na, .prose .highlight .nb { color: #a7f3d0; } /* names/attrs */
+.prose .highlight .c, .prose .highlight .cm, .prose .highlight .cp { color: #94a3b8; } /* comments */
+
+/* Callouts via Blockquote-Kürzel (optional) ------------------------------ */
+/* Wenn du im Markdown > **Tipp:** … schreibst, wird die erste starke Markierung optisch akzentuiert */
+.prose blockquote strong:first-child{
+  background: linear-gradient(transparent 60%, var(--accent-underline) 60%);
+  padding: 0 .1em;
+  border-radius: .1em;
+}
+
+/* Responsive & Print ----------------------------------------------------- */
+@media (max-width: 640px){
+  .prose { padding: 1rem; }
+  .prose table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+@media print{
+  :root{ --bg:#fff; --text:#000; --border:#ddd; --accent:#000; }
+  .prose{ box-shadow: none; color: #000; }
+  .prose a{ border-bottom: 1px solid #000; color: #000; }
+  .prose pre{ box-shadow: none; }
+}
