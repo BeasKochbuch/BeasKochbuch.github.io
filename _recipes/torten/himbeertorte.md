@@ -3,7 +3,7 @@ layout: recipe
 title: "Himbeertorte"
 category: "Süße Rezepte"
 subcategory: "Torten"
-permalink: /recipes/sweet/torten/himbeer-torte/
+permalink: /recipes/sweet/torten/himbeertorte/
 ---
 
 Zutaten
