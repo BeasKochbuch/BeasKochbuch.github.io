@@ -4,6 +4,7 @@ title: "Kuchen"
 category: "Süße Rezepte"
 subcategory: "Kuchen"
 permalink: /recipes/sweet/cake/
+is_root: false
 ---
 
 <p>Kurzer Introtext zu den Kuchen …</p>

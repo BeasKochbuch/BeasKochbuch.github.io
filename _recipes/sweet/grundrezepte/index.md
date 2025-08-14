@@ -4,6 +4,7 @@ title: "Grundrezepte"
 category: "Süße Rezepte"
 subcategory: "Grundrezepte"
 permalink: /recipes/sweet/basics/
+is_root: false
 ---
 
 <p>Kurzer Introtext zu den Grundrezepten …</p>

@@ -4,6 +4,7 @@ title: "Suppen"
 category: "Salzige Rezepte"
 subcategory: "Suppen"
 permalink: /recipes/salty/soups/
+is_root: false
 ---
 
 <p>Kurzer Introtext zu den Suppen …</p>

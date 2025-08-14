@@ -4,6 +4,7 @@ title: "Torten"
 category: "Süße Rezepte"
 subcategory: "Torten"
 permalink:  /recipes/sweet/torten/
+is_root: false
 ---
 
 <p>Kurzer Introtext zu den Torten …</p>

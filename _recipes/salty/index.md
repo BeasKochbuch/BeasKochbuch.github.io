@@ -3,6 +3,7 @@ layout: category
 title: "Salzige Rezepte"
 category: "Salzige Rezepte"
 permalink: /recipes/salty/
+is_root: true
 ---
 
 <p>Kurzer Introtext zu den süßen Rezepten …</p>

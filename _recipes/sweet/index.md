@@ -3,6 +3,7 @@ layout: category
 title: "Süße Rezepte"
 category: "Süße Rezepte"
 permalink: /recipes/sweet/
+is_root: true
 ---
 
 <p>Kurzer Introtext zu den süßen Rezepten …</p>

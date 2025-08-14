@@ -4,6 +4,7 @@ title: "Salate"
 category: "Salzige Rezepte"
 subcategory: "Salate"
 permalink: /recipes/salty/salads/
+is_root: false
 ---
 
 <p>Kurzer Introtext zu den Salate …</p>
