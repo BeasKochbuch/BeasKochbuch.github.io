@@ -6,7 +6,7 @@ subcategory: "Suppen"
 permalink: /recipes/salty/soupe/brokkoli-kaese-suppe/
 ---
 
-# Zutaten
+## Zutaten
 1/2 Brokkoli
 1 Karotte
 1 Zwiebel
@@ -17,7 +17,7 @@ permalink: /recipes/salty/soupe/brokkoli-kaese-suppe/
 1/2 EL Butter
 Salz, Pfeffer
 
-# Zubereitung
+## Zubereitung
 Zwiebeln schälen und würfeln. Karotten schälen und in dünne Stifte schneiden. Brokkoli waschen und sehr fein schneiden.
 Butter in einem Topf auf mittlerer Stufe zerlassen und Zwiebeln ca. 3 Minuten darin anschwitzen, bis sie weich werden. Mehl dazugeben und weitere 2 Minuten anschwitzen. Brühe in den Topf geben und mit Salz und Pfeffer würzen.
 Brokkoli und Karotten dazugeben. Die Suppe zum Kochen bringen, Hitze reduzieren und 15-20 Minuten köcheln lassen.

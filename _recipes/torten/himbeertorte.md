@@ -6,9 +6,9 @@ subcategory: "Torten"
 permalink: /recipes/sweet/torten/himbeertorte/
 ---
 
-# Zutaten
+## Zutaten
 
-## Biskuitböden
+### Biskuitböden
 - 150 g Butter
 - 200 g Zucker
 - 4 Eier
@@ -16,12 +16,12 @@ permalink: /recipes/sweet/torten/himbeertorte/
 - ½ Pk. Backpulver
 - Vanillezucker
 
-## Füllung/Deko
+### Füllung/Deko
 - Nutella oder geschmolzene Schokolade
 - Himbeermarmelade
 - Himbeeren
 
-## Buttercreme
+### Buttercreme
 - 1 Packung Vanillepuddingpulver (500ml)
 - Himbeeren
 - Milch
@@ -29,9 +29,9 @@ permalink: /recipes/sweet/torten/himbeertorte/
 - 100 g Zucker
 
 
-# Zubereitung
+## Zubereitung
 
-## Biskuitböden
+### Biskuitböden
 (150 g Butter, 200 g Zucker, 4 Eier, 250 g Mehl, ½ Pk. Backpulver, Vanillezucker)
 1. Butter, Zucker und Vanillezucker cremig schlagen
 2. Nach und nach Eier dazugeben und verrühren
@@ -43,7 +43,7 @@ Bakzeit: Für 15-20 Minuten bei 180°C backen (Stäbchenprobe durchführen)
 
 --> Wenn der Teig abgekühlt ist diesen in drei Böden teilen
 
-## Buttercreme
+### Buttercreme
 1. Einen Teil der Himbeeren (ca. 250 ml) pürieren und mit Milch zu 500 ml auffüllen
 2. Ggf. durch ein Sieb gießen, um Himbeerkerne zu entfernen
 3. Mit dieser Mischung den Vanillepudding kochen
@@ -51,6 +51,6 @@ Bakzeit: Für 15-20 Minuten bei 180°C backen (Stäbchenprobe durchführen)
 5. Butter weich rühren, Zucker zugeben und schaumig schlagen
 6. Den auf Zimmertemperatur abgekühlten Pudding esslöffelweise dazugeben und gut verrühren
 
-## Schichtung der Torte
+### Schichtung der Torte
 Von unten nach oben:
 Boden, Nutella bzw. geschmolzene Schokolade, Buttercreme, Boden, Himbeermarmelade, Buttercreme, Boden, Buttercreme

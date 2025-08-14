@@ -6,7 +6,7 @@ subcategory: "Salate"
 permalink: /recipes/salty/salads/american-coleslaw/
 ---
 
-# Zutaten
+## Zutaten
 ½ Kopf Rotkohl
 ½ Kopf Eisbergsalat
 1 Zwiebel
@@ -21,7 +21,7 @@ Dressing:
 125 ml neutrales Öl
 125 ml neutraler Essig
 
-# Zubereitung
+## Zubereitung
 Rotkohl und Eisbergsalat in feine Streifen und die Zwiebel klein schneiden.
 Mandeln, Sonnenblumenkerne und klein gebröselte Ramennudeln in der Butter rösten.
 Das Dressing im Shaker zubereiten.
