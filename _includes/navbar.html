@@ -10,8 +10,18 @@
       <button class="dropbtn">Rezepte</button>
       <div class="dropdown-content">
         {% for c in cats %}
+          {% assign cat_landing = site.recipes
+            | where:"layout","category"
+            | where:"category", c
+            | first %}
+
           <div class="dropdown-category">
-            <strong>{{ c }}</strong>
+            {% if cat_landing %}
+              <strong><a href="{{ cat_landing.url | relative_url }}">{{ c }}</a></strong>
+            {% else %}
+              <strong>{{ c }}</strong>
+            {% endif %}
+
             <ul>
               {% assign subs = site.recipes
                 | where:"layout","recipe"
@@ -29,7 +39,6 @@
                   {% if landing %}
                     <a href="{{ landing.url | relative_url }}">{{ s }}</a>
                   {% else %}
-                    {# Fallback: falls (noch) keine Landing existiert #}
                     <a href="{{ '/recipes/' | append:(s | slugify) | append:'/' | relative_url }}">{{ s }}</a>
                   {% endif %}
                 </li>

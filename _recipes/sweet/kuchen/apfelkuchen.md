@@ -45,10 +45,11 @@ permalink: /recipes/sweet/cake/apple-cake/
 1. Äpfel schälen, Kerngehäuse entfernen und würfeln
 2. In einer Schüssel mit Zimt und Zitronensaft vermengen. 
 3. Apfelwürfel auf dem Teig verteilen.
-Den Ofen auf 180 Grad (Umluft: 160 Grad) vorheizen.
+4. Den Ofen auf 180 Grad (Umluft: 160 Grad) vorheizen.
 
 ### Streusel
 (125 g Butter (zimmerwarm), 80 g Zucker, 1 Pk. Vanillezucker, 200 g Mehl, 1 Prise Salz)
+
 Butter, Zucker, Vanillezucker, Mehl und Salz kurz zu groben Streuseln kneten und auf dem Kuchen verteilen.
 
 Backzeit: ca. 50-60 Minuten bei 180°C (Umluft: 160°C)
