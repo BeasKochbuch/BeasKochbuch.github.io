@@ -7,7 +7,7 @@ permalink: /recipes/salty/salads/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Salate …</p>
+<p>Hier findet ihr alle Salat Rezepte!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

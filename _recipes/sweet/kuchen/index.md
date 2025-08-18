@@ -7,7 +7,7 @@ permalink: /recipes/sweet/cake/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Kuchen …</p>
+<p>Hier findet ihr alle Kuchenrezepte!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

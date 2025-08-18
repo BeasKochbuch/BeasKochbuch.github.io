@@ -7,7 +7,7 @@ permalink: /recipes/sweet/Kekse/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Keksen …</p>
+<p>Hier findet ihr leckere Keksrezepte!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

@@ -7,7 +7,7 @@ permalink: /recipes/sweet/gutsle/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Gutsle …</p>
+<p>Hier findet ihr die guten Plätzchen für die Weihnachtszeit!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

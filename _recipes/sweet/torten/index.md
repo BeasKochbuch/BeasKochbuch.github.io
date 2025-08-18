@@ -7,7 +7,7 @@ permalink:  /recipes/sweet/torten/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Torten …</p>
+<p>Hier findet ihr alle Torten Rezepte!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

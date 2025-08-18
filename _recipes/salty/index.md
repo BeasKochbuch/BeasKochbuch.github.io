@@ -6,7 +6,7 @@ permalink: /recipes/salty/
 is_root: true
 ---
 
-<p>Kurzer Introtext zu den süßen Rezepten …</p>
+<p>In dieser Kategorie findet ihr alle salzigen Rezepte!</p>
 
 {%- assign subs = site.recipes
   | where:"layout","recipe"

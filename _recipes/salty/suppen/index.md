@@ -7,7 +7,7 @@ permalink: /recipes/salty/soups/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Suppen …</p>
+<p>Hier findet ihr alle Suppen Rezepte!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

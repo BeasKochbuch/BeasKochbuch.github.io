@@ -7,7 +7,7 @@ permalink: /recipes/sweet/basics/
 is_root: false
 ---
 
-<p>Kurzer Introtext zu den Grundrezepten …</p>
+<p>Hier findet ihr alle Basis Rezepte / Grundrezepte für Kuchen und Torten!</p>
 
 {% assign items = site.recipes
   | where:"subcategory", page.subcategory

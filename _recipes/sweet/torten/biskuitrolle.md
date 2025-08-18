@@ -2,7 +2,7 @@
 layout: recipe
 title: "Biskuitrolle"
 category: "Süße Rezepte"
-subcategory: "Torte"
+subcategory: "Torten"
 permalink: /recipes/sweet/torten/buiskuitrolle/
 ---
 
