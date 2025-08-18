@@ -20,8 +20,8 @@ permalink: /recipes/sweet/cake/zitronenkuchen/
 - ½ Pk. Backpulver
 
 ### Zuckerguss
-200 g Puderzucker
-2-3 EL Zitronensaft
+- 200 g Puderzucker
+- 2-3 EL Zitronensaft
 
 
 ## Zubereitung

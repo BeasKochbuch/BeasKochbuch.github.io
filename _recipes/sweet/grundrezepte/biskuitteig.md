@@ -3,7 +3,7 @@ layout: recipe
 title: "Biskuitteig"
 category: "Süße Rezepte"
 subcategory: "Grundrezepte"
-permalink: /recipes/sweet/basic/biscuit-cake/
+permalink: /recipes/sweet/basics/biscuitteig/
 ---
 
 ## Zutaten für Springform ∅ 26 cm
@@ -14,12 +14,12 @@ permalink: /recipes/sweet/basic/biscuit-cake/
 - ½ Pk. Backpulver
 - Vanillezucker
 
-## Zutaten für Springform ∅ 26 cm
-250 g (100 g) Mehl
-200 g (80 g) Zucker
-150 g (60 g) Butter
-½ Pk. (1 TL) Backpulver
-4 Eier (2)
+## Zutaten für Springform ∅  cm
+- 250 g (100 g) Mehl
+- 200 g (80 g) Zucker
+- 150 g (60 g) Butter
+- ½ Pk. (1 TL) Backpulver
+- 4 Eier (2)
 Vanillezucker
 
 ## Zubereitung

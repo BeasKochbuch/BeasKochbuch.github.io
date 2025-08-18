@@ -3,7 +3,7 @@ layout: recipe
 title: "Aprikosenkuchen"
 category: "Süße Rezepte"
 subcategory: "Kuchen"
-permalink: /recipes/sweet/cake/apricot-cake/
+permalink: /recipes/sweet/cake/aprikosenkuchen/
 ---
 
 ## Zutaten
