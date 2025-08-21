@@ -10,6 +10,7 @@ is_root: false
 <p>Hier findet ihr alle Rezepte die ich keiner anderen Kategorie zuordnen konnte!</p>
 
 {% assign items = site.recipes
+  | where:"category", page.category
   | where:"subcategory", page.subcategory
   | where:"layout","recipe"
   | sort:"title" %}

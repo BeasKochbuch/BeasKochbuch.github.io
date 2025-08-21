@@ -7,9 +7,10 @@ permalink: /recipes/salty/sonstiges/
 is_root: false
 ---
 
-<p>Hier findet ihr alle salzigen Rezepte die ich keiner Kategorie zuornen konnte!</p>
+<p>Hier findet ihr alle salzigen Rezepte die ich keiner Kategorie zuorddnen konnte!</p>
 
 {% assign items = site.recipes
+  | where:"category", page.category
   | where:"subcategory", page.subcategory
   | where:"layout","recipe"
   | sort:"title" %}
