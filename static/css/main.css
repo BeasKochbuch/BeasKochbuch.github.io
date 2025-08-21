@@ -431,9 +431,7 @@ Responsive Anpassungen
     }
 }
 
-@media (max-width: 500px) {
-    /* Kleine Smartphones */
-
+/* @media (max-width: 500px) {
     body {
         font-size: 14px;
     }
@@ -450,4 +448,4 @@ Responsive Anpassungen
     main h2 {
         font-size: 1.25rem;
     }
-}
+} */
