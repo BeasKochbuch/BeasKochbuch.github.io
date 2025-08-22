@@ -404,7 +404,8 @@ Responsive Anpassungen
     /* Tablet und kleinere Displays */
 
     /* Container wird einspaltig: keine Sidebar */
-    .container {
+    .container,
+    .section {
         display: block;
         padding: 0.5rem;
     }
@@ -431,7 +432,9 @@ Responsive Anpassungen
     }
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
+    /* Kleine Smartphones */
+
     body {
         font-size: 14px;
     }
@@ -448,4 +451,8 @@ Responsive Anpassungen
     main h2 {
         font-size: 1.25rem;
     }
-} */
+
+    .sidenav {
+        display: none; 
+    }
+}
